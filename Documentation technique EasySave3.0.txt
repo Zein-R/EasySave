@@ -1,0 +1,24 @@
+Documentation technique EasySave3.0
+
+#Lancer l'executable
+
+ -Pour lancer l'executable ouvrer votre explorateur de fichier puis démarrer l'executable à cette adresse                    \EasySave\EasySave.exe
+
+#Fichier LogFile
+ 
+ -Le fichier log est sauvegardé dans ce repertoire : \EasySave_exe\EasySave\Logs\
+
+#Fichier d'état
+
+ -Le fichier détat est sauvegardé dans ce repertoire : \EasySave_exe\EasySave
+
+#Fichier d'extension à chiffrer
+
+ -Le fichier des extensions à chiffrer est sauvegardé dans ce repetroire :
+\EasySave_exe\Ressources\EasySave\CryptExtension.json
+
+Pour remplir ce fichier il y a une syntaxe à respecter, il faut séparer le logiciel à bannir par un ","
+
+[
+  { "extension_to_crypt": ".txt,.csv" }
+]
