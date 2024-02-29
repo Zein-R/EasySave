@@ -1,0 +1,281 @@
+﻿<Page x:Class="EasySave.NS_View.SettingsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:language="clr-namespace:EasySave.Langs"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="SettingsView">
+
+
+    <Grid Background="#FEFADF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="74"/>
+            <RowDefinition Height="74"/>
+            <RowDefinition Height="74"/>
+            <RowDefinition Height="74"/>
+            <RowDefinition Height="74"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="0">
+
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{x:Static language:Lang.settings}"
+                       FontSize="30" FontFamily="/Fonts/#Roboto" FontWeight="Bold"/>
+        </Grid>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Background="Gray"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+            <Label x:Name="cryptoSoftPathLabel" Content="{x:Static language:Lang.cryptosoftPath}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="140"/>
+                </Grid.ColumnDefinitions>
+
+                <Border CornerRadius="10"
+                        Background="White"
+                        Width="auto">
+                    <TextBox x:Name="_cryptoSoftPath" Grid.ColumnSpan="2"
+                             Margin="1" Padding="5" BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             Background="Transparent"
+                             FontFamily="/Fonts/#Roboto" FontSize="17" Foreground="Black"/>
+                </Border>
+                <Button x:Name="cryptoSoftPathOpenFolderButton" Grid.Column="1"
+                        Width="40" HorizontalAlignment="Right"
+                        Click="CryptoSoftPathOpenFolderButtonButton_Click"
+                        FontFamily="/Fonts/#Roboto" FontSize="17" FontWeight="Bold"
+                        Style="{StaticResource PickFolderButtonStyle}">...</Button>
+                <Button x:Name="cryptoSoftPathButton" Grid.Column="3"
+                        Width="130" HorizontalAlignment="Right"
+                        Click="CryptoSoftPathButton_Click"
+                        FontFamily="/Fonts/#Roboto" FontSize="15" FontWeight="Regular"
+                        Margin="10,0,0,0" Content="{x:Static language:Lang.save}"
+                        Style="{StaticResource CreateButtonStyle}"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">
+            <Label x:Name="addExtensionLabel" Content="{x:Static language:Lang.extensionFile}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border CornerRadius="10"
+                            Background="White"
+                            Width="auto">
+                        <TextBox x:Name="_addExtension"
+                             Margin="1" Padding="5" BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             Background="Transparent"
+                             FontFamily="/Fonts/#Roboto" FontSize="17" Foreground="Black"/>
+                    </Border>
+                    <Button x:Name="addExtensionButton" Grid.Column="1"
+                            Height="auto" Width="35" Foreground="White"
+                            Style="{StaticResource AddButtonStyle}"
+                            Click="AddExtensionButton_Click">+</Button>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ComboBox x:Name="_removeExtension" SelectedIndex="0" ItemsSource="{Binding model.settings.cryptoExtensions}"/>
+                    <Button x:Name="removeExtensionButton" Grid.Column="1" Height="15" Width="15" Padding="0, -2, 0, 0" Background="Red" Foreground="White" Click="RemoveExtensionButton_Click">X</Button>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="4" VerticalAlignment="Center">
+            <Label x:Name="addPrioExtensionLabel" Content="{x:Static language:Lang.prioExtensionLabel}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border CornerRadius="10"
+                            Background="White"
+                            Width="auto">
+                        <TextBox x:Name="_addPrioExtension"
+                             Margin="1" Padding="5" BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             Background="Transparent"
+                             FontFamily="/Fonts/#Roboto" FontSize="17" Foreground="Black"/>
+                    </Border>
+                    <Button x:Name="addPrioExtensionButton" Grid.Column="1"
+                            Height="auto" Width="35" Foreground="White"
+                            Click="AddExtensionButton_Click"
+                            Style="{StaticResource AddButtonStyle}"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ComboBox x:Name="_removePrioExtension" SelectedIndex="0" ItemsSource="{Binding model.settings.prioExtensions}"/>
+                    <Button x:Name="removePrioExtensionButton" Grid.Column="1" Height="15" Width="15" Padding="0, -2, 0, 0" Background="Red" Foreground="White" Click="RemovePrioExtensionButton_Click">X</Button>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">
+            <Label x:Name="addBusinessSoftwareLabel" Content="{x:Static language:Lang.businessSoftware}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border CornerRadius="10"
+                            Background="White"
+                            Width="auto">
+                        <TextBox x:Name="_addBusinessSoftware" Grid.ColumnSpan="2"
+                             Margin="1" Padding="5" BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             Background="Transparent"
+                             FontFamily="/Fonts/#Roboto" FontSize="17" Foreground="Black"/>
+                    </Border>
+                    <Button x:Name="addBusinessSoftwareButton" Grid.Column="2"
+                            Height="auto" Width="35" Foreground="White"
+                            Click="AddExtensionButton_Click"
+                            Style="{StaticResource AddButtonStyle}"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ComboBox x:Name="_removeBusinessSoftware" SelectedIndex="0" ItemsSource="{Binding model.settings.businessSoftwares}"/>
+                    <Button x:Name="removeBusinessSoftwareButton" Grid.Column="1" Height="15" Width="15" Padding="0, -2, 0, 0" Background="Red" Foreground="White" Click="RemoveBusinessSoftwareButton_Click">X</Button>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="6" VerticalAlignment="Center">
+            <Label x:Name="maxSimultaneousFilesSizeLabel" Content="{x:Static language:Lang.maxSimultaneousFilesSize}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="140"/>
+                </Grid.ColumnDefinitions>
+
+                <Border CornerRadius="10"
+                        Background="White"
+                        Width="auto">
+                    <TextBox x:Name="_maxSimultaneousFilesSize"
+                             Margin="1" Padding="5" BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             Background="Transparent"
+                             FontFamily="/Fonts/#Roboto" FontSize="17" Foreground="Black"/>
+                </Border>
+                <Button x:Name="maxSimultaneousFilesSizeButton" Grid.Column="1"
+                        Width="130" Height="35"
+                        HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Click="MaxSimultaneousFilesSizeButton_Click"
+                        Margin="10,0,0,0"
+                        FontFamily="/Fonts/#Roboto" FontSize="15" FontWeight="Regular"
+                        Content="{x:Static language:Lang.save}" 
+                        Style="{StaticResource CreateButtonStyle}"
+                        />
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <Label Content="{x:Static language:Lang.language}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="enButton" Content="English"
+                        Grid.Column="0"
+                        Margin="50,10,50,10"
+                        Click="ChangeLanguage"
+                        Tag="en-US" Background="Transparent"
+                        BorderBrush="Transparent"
+                        Style="{StaticResource ButtonStyle}"/>
+                <Button x:Name="frButton" Content="Français"
+                        Grid.Column="1"
+                        Margin="50,10,50,10"
+                        Height="50"
+                        Click="ChangeLanguage"
+                        Tag="fr-FR" Background="Transparent"
+                        BorderBrush="Transparent"
+                        Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <Label Content="{x:Static language:Lang.logFileFormat}"
+           FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <RadioButton Grid.Column="0" Content="JSON"
+                             IsChecked="True"
+                             FontSize="17"
+                             FontFamily="/Fonts/#Roboto" FontWeight="Medium"
+                             Margin="25,0,50,0"
+                             Style="{StaticResource RadioButtonTheme}"/>
+                <RadioButton Grid.Column="1" Content="XML"
+                             FontSize="17"
+                             FontFamily="/Fonts/#Roboto" FontWeight="Medium"
+                             Style="{StaticResource RadioButtonTheme}"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

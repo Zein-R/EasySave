@@ -1,0 +1,13 @@
+{
+  "cryptoSoftPath": "",
+  "maxSimultaneousFilesSize": 1000,
+  "language": "fr-FR",
+  "cryptoExtensions": [],
+  "prioExtensions": [],
+  "businessSoftwares": [
+    "",
+    "notepad.exe",
+    "google.exe",
+    "test.txt"
+  ]
+}

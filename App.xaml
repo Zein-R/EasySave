@@ -1,0 +1,25 @@
+﻿<Application x:Class="EasySave.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EasySave"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/RadioButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CreateButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ClearButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/AddButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/EditButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DelButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/PickFolderButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/HomeButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

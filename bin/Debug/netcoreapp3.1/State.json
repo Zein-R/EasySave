@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Save4",
+    "src": "c:\\users\\zeinr\\onedrive\\bureau\\backuptest\\",
+    "dst": "c:\\users\\zeinr\\onedrive\\bureau\\target\\",
+    "backupType": 0,
+    "isCrypted": false,
+    "lastBackupDate": "2024/02/28_08:46:48",
+    "colorProgressBar": "White",
+    "state": {
+      "totalFile": 0,
+      "totalPrioFile": 0,
+      "leftPrioFile": 0,
+      "totalSize": 0,
+      "Progress": 0,
+      "nbFileLeft": 0,
+      "leftSize": 0,
+      "currentPathSrc": "",
+      "currentPathDest": "",
+      "progress": 0
+    }
+  },
+  {
+    "name": "onon",
+    "src": "c:\\users\\zeinr\\onedrive\\bureau\\backuptest\\",
+    "dst": "c:\\users\\zeinr\\onedrive\\bureau\\target\\",
+    "backupType": 0,
+    "isCrypted": false,
+    "lastBackupDate": "2024/02/28_14:21:38",
+    "colorProgressBar": "White",
+    "state": {
+      "totalFile": 0,
+      "totalPrioFile": 0,
+      "leftPrioFile": 0,
+      "totalSize": 0,
+      "Progress": 0,
+      "nbFileLeft": 0,
+      "leftSize": 0,
+      "currentPathSrc": "",
+      "currentPathDest": "",
+      "progress": 0
+    }
+  },
+  {
+    "name": "ZOU",
+    "src": "c:\\users\\zeinr\\onedrive\\bureau\\backuptest\\",
+    "dst": "c:\\users\\zeinr\\onedrive\\bureau\\target\\",
+    "backupType": 0,
+    "isCrypted": false,
+    "lastBackupDate": "2024/02/29_21:32:12",
+    "colorProgressBar": "White",
+    "state": {
+      "totalFile": 0,
+      "totalPrioFile": 0,
+      "leftPrioFile": 0,
+      "totalSize": 0,
+      "Progress": 0,
+      "nbFileLeft": 0,
+      "leftSize": 0,
+      "currentPathSrc": "",
+      "currentPathDest": "",
+      "progress": 0
+    }
+  }
+]
