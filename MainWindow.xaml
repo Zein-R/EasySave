@@ -4,24 +4,55 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:language="clr-namespace:EasySave.Langs"
-        mc:Ignorable="d"
-        Title="EasySave" MinHeight="720" MinWidth="1280">
+        mc:Ignorable="d" MouseLeftButtonDown="Window_MouseLeftButtonDown"
+        Title="EasySave" MinHeight="720" MinWidth="1280"
+        WindowStyle="None">
 
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
 
     <Grid Background="#FEFADF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Background="#FAEDCD"
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Background="#CDD5B0"
+                    CornerRadius="0,10,0,0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="btnReduce" Height="Auto" Width="35" BorderBrush="Transparent" Background="Transparent"
+                            Click="btnReduce_Click">
+                        <Image Source="\Images\ReduceBtn.png" Width="10" Height="10"/>
+                    </Button>
+                    <Button x:Name="btnMaximize" Height="Auto" Width="35" BorderBrush="Transparent" Background="Transparent"
+                            Click="btnMaximize_Click">
+                        <Image Source="\Images\ResizeBtn.png" Width="10" Height="10"/>
+                    </Button>
+                    <Button x:Name="btnClose" Height="Auto" Width="35" BorderBrush="Transparent" Background="Transparent"
+                            Click="btnClose_Click">
+                        <Image Source="\Images\closeBtn.png" Width="10" Height="10"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <StackPanel Background="#FAEDCD" Grid.RowSpan="2"
                     Height="auto">
 
             <RadioButton Content="{x:Static language:Lang.dashboard}" IsChecked="True"
                  Height="50" FontSize="17" FontFamily="/Fonts/#Roboto"
                  Style="{StaticResource MenuButtonTheme}"
                  Click="ChangePage" Tag="menu"/>
-
             <RadioButton Content="{x:Static language:Lang.createBackupWork}"
                  Height="50" FontSize="17" FontFamily="/Fonts/#Roboto"
                  Style="{StaticResource MenuButtonTheme}"
@@ -31,19 +62,21 @@
                  Style="{StaticResource MenuButtonTheme}"
                  Click="ChangePage" Tag="settings"/>
         </StackPanel>
-        <StackPanel VerticalAlignment="Bottom">
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="1">
             <Button Content="{x:Static language:Lang.socket}"
                     Margin="10,5,10,5"
                     Height="40"
                     Style="{StaticResource ButtonStyle}"
                     Click="InitSocket"/>
-            <Button Content="{x:Static language:Lang.logFiles}"
+            <Button Name="OpenLogFiles" Content="{x:Static language:Lang.logFiles}"
                     Height="40"
                     Margin="10,5,10,20"
-                    Style="{StaticResource ButtonStyle}"/>
+                    Style="{StaticResource ButtonStyle}"
+                    Click="OpenLogFiles_Click"/>
         </StackPanel>
 
-        <Frame Grid.Column="1" Grid.Row="0" Content="{Binding}" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Column="1" Grid.Row="1"
+               Content="{Binding}" NavigationUIVisibility="Hidden"/>
     </Grid>
     
     

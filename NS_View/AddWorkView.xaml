@@ -119,6 +119,32 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">
+            <Label x:Name="mirLabel" Content="{x:Static language:Lang.mirror}"
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="29*"/>
+                    <ColumnDefinition Width="291*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.ColumnSpan="2" CornerRadius="10"
+                        Background="White"
+                        Width="auto">
+                    <TextBox x:Name="_mir" Grid.ColumnSpan="2"
+                             Margin="1" Padding="5" BorderThickness="0"
+                             VerticalContentAlignment="Center"
+                             Background="Transparent"
+                             FontFamily="/Fonts/#Roboto" FontSize="17" Foreground="Black"/>
+                </Border>
+                <Button x:Name="mirOpenFolderButton" Grid.Column="2"
+                        Width="40" HorizontalAlignment="Right"
+                        Click="mirOpenFolderButton_Click"
+                        FontFamily="/Fonts/#Roboto" FontSize="17" FontWeight="Bold"
+                        Style="{StaticResource PickFolderButtonStyle}">...</Button>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="6" VerticalAlignment="Center">
             <Label Content="{x:Static language:Lang.backupType}"
                    FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
             <ComboBox x:Name="_backupType" SelectedIndex="0" ItemsSource="{Binding Source={local:EnumBindingSource {x:Type model:BackupType}}}"/>

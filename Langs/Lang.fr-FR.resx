@@ -324,4 +324,7 @@
   <data name="logFiles" xml:space="preserve">
     <value>Fichiers Log</value>
   </data>
+  <data name="mirror" xml:space="preserve">
+    <value>Miroir</value>
+  </data>
 </root>

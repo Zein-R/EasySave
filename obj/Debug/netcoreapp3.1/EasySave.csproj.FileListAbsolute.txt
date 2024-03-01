@@ -44,3 +44,6 @@ C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netc
 C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netcoreapp3.1\Theme\TextBoxTheme.baml
 C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netcoreapp3.1\Theme\ButtonTheme.baml
+C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netcoreapp3.1\Theme\CancelButtonTheme.baml
+C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netcoreapp3.1\Theme\PauseButtonTheme.baml
+C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\obj\Debug\netcoreapp3.1\Theme\PlayButtonTheme.baml

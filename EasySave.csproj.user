@@ -13,6 +13,9 @@
     <Page Update="Theme\ButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Theme\CancelButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\ClearButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -31,7 +34,13 @@
     <Page Update="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Theme\PauseButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\PickFolderButtonTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Theme\PlayButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Theme\RadioButtonTheme.xaml">

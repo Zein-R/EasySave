@@ -448,6 +448,15 @@ namespace EasySave.Langs {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mirror.
+        /// </summary>
+        public static string mirror {
+            get {
+                return ResourceManager.GetString("mirror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string name {

@@ -18,6 +18,10 @@
                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/HomeButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
+
+                <ResourceDictionary Source="Theme/PlayButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/PauseButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CancelButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>

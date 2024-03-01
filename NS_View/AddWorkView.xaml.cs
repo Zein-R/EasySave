@@ -48,6 +48,13 @@ namespace EasySave.NS_View
             // Set Selected Path in Destination TextBox
             _dst.Text = this.folderBrowserDialog.SelectedPath;
         }
+        private void mirOpenFolderButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Open Folder Browser
+            this.folderBrowserDialog.ShowDialog();
+            // Set Selected Path in Destination TextBox
+            _mir.Text = this.folderBrowserDialog.SelectedPath;
+        }
 
         private void AddWork_Click(object sender, RoutedEventArgs e)
         {
@@ -80,6 +87,7 @@ namespace EasySave.NS_View
                 _name.Text = "";
                 _src.Text = "";
                 _dst.Text = "";
+                _mir.Text = "";
                 _backupType.SelectedIndex = 0;
                 _isCrypted.IsChecked = false;
 

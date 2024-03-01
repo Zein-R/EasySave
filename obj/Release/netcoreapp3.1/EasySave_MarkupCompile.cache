@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\zeinr\Source\Repos\EasySave-PlanB\EasySave_Code\EasySave\App.xaml
-16-1338073176
+191284390038
 
 22417805291
 199-1336183941
-MainWindow.xaml;NS_View\AddWorkView.xaml;NS_View\ErrorView.xaml;NS_View\MenuView.xaml;NS_View\SettingsView.xaml;Theme\AddButtonTheme.xaml;Theme\ButtonTheme.xaml;Theme\ClearButtonTheme.xaml;Theme\CreateButtonTheme.xaml;Theme\DelButtonTheme.xaml;Theme\EditButtonTheme.xaml;Theme\HomeButtonTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\PickFolderButtonTheme.xaml;Theme\RadioButtonTheme.xaml;Theme\TextBoxTheme.xaml;
+MainWindow.xaml;NS_View\AddWorkView.xaml;NS_View\ErrorView.xaml;NS_View\MenuView.xaml;NS_View\SettingsView.xaml;Theme\AddButtonTheme.xaml;Theme\ButtonTheme.xaml;Theme\CancelButtonTheme.xaml;Theme\ClearButtonTheme.xaml;Theme\CreateButtonTheme.xaml;Theme\DelButtonTheme.xaml;Theme\EditButtonTheme.xaml;Theme\HomeButtonTheme.xaml;Theme\MenuButtonTheme.xaml;Theme\PauseButtonTheme.xaml;Theme\PickFolderButtonTheme.xaml;Theme\PlayButtonTheme.xaml;Theme\RadioButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
 True
 

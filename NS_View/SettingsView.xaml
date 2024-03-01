@@ -13,13 +13,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="55"/>
             <RowDefinition Height="2"/>
-            <RowDefinition Height="74"/>
-            <RowDefinition Height="74"/>
-            <RowDefinition Height="74"/>
-            <RowDefinition Height="74"/>
-            <RowDefinition Height="74"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -229,7 +229,7 @@
             </Grid>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" VerticalAlignment="Center">
+        <StackPanel Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" VerticalAlignment="Center">
             <Label Content="{x:Static language:Lang.language}"
                    FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
             <Grid>
@@ -256,22 +256,24 @@
             </Grid>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" VerticalAlignment="Center">
+        <StackPanel Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" VerticalAlignment="Center">
             <Label Content="{x:Static language:Lang.logFileFormat}"
-           FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"></Label>
+                   FontFamily="/Fonts/#Roboto" FontSize="13" FontWeight="Medium"
+                   Margin="0,0,0,10"></Label>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
-                <RadioButton Grid.Column="0" Content="JSON"
+                <RadioButton Grid.Column="1" Content="JSON"
                              IsChecked="True"
                              FontSize="17"
                              FontFamily="/Fonts/#Roboto" FontWeight="Medium"
-                             Margin="25,0,50,0"
                              Style="{StaticResource RadioButtonTheme}"/>
-                <RadioButton Grid.Column="1" Content="XML"
+                <RadioButton Grid.Column="2" Content="XML"
                              FontSize="17"
                              FontFamily="/Fonts/#Roboto" FontWeight="Medium"
                              Style="{StaticResource RadioButtonTheme}"/>

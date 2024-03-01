@@ -58,7 +58,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="10"/>
             <RowDefinition/>
             <RowDefinition Height="10"/>
@@ -67,60 +67,38 @@
 
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="1" Background="White" Margin="10, 0, 0, 0" >
-                <Border CornerRadius="90" BorderBrush="Red" BorderThickness="6" HorizontalAlignment="Center" >
-                    <Button Grid.Column="0" Background="Red" Foreground="White" FontSize="26" FontWeight="Bold" Padding="2, -14, 2, -7" BorderBrush="Red" Click="Remove_Clicked">-</Button>
-                </Border>
-            </StackPanel>
+            <Button Grid.Column="0"
+                    Click="Remove_Clicked"
+                    Style="{StaticResource DelButtonStyle}"/>
 
-            <StackPanel Grid.Column="3" Background="White" Margin="0, 0, 10, 0" >
-                <Border CornerRadius="9" BorderBrush="LightGray" BorderThickness="6" HorizontalAlignment="Center" >
-                    <Button Grid.Column="0" Background="LightGray" BorderBrush="LightGray" FontSize="14" Padding="0, -2" Click="SelectAll_Clicked" Content="{x:Static language:Lang.selectAll}"></Button>
-                </Border>
-            </StackPanel>
+            <Button Grid.Column="2"
+                      Content="{x:Static language:Lang.selectAll}"
+                      Style="{StaticResource ButtonStyle}"
+                      Click="SelectAll_Clicked"/>
 
-            <StackPanel Grid.Column="7" Background="White" Margin="0, 0, 10, 0" >
-                <Border CornerRadius="90" BorderBrush="#4FD31D" BorderThickness="6" HorizontalAlignment="Center" >
-                    <Button Grid.Column="0" Background="#4FD31D" Foreground="White" FontSize="26" Padding="-1, -13, -3, -7" BorderBrush="#4FD31D" Click="Save_Clicked">></Button>
-                </Border>
-            </StackPanel>
+            <Button Grid.Column="4" Margin="5,0"
+                    Click="Save_Clicked"
+                    Style="{StaticResource PlayButtonStyle}"/>
 
-            <StackPanel Grid.Column="8" Background="White" Margin="0, 0, 10, 0" >
-                <Border CornerRadius="90" BorderBrush="Orange" BorderThickness="6" HorizontalAlignment="Center" >
-                    <Button Grid.Column="0" Background="Orange" Foreground="White" FontSize="14" FontWeight="Bold" Padding="0, -4, 0, 0" BorderBrush="Orange" Click="PauseBackup_Clicked">| |</Button>
-                </Border>
-            </StackPanel>
+            <Button Grid.Column="5" Margin="5,0"
+                    Click="PauseBackup_Clicked"
+                    Style="{StaticResource PauseButtonStyle}"/>
 
-            <StackPanel Grid.Column="9" Background="White" Margin="0" >
-                <Border CornerRadius="90" BorderBrush="Red" BorderThickness="6" HorizontalAlignment="Center" >
-                    <Button Grid.Column="0" Background="Red" Foreground="White" FontSize="26" Padding="1, -13, 2, -7" BorderBrush="Red" Click="CancelBackup_Clicked">x</Button>
-                </Border>
-            </StackPanel>
+            <Button Grid.Column="6" Margin="5,0"
+                    Foreground="White" FontSize="20" FontFamily="Fonts/#Roboto"
+                    Click="CancelBackup_Clicked"
+                    Style="{StaticResource CancelButtonStyle}"/>
+
         </Grid>
-
-        <!--
-        <Grid Grid.Row="1" Grid.Column="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Label Content="{x:Static language:Lang.searchName}"></Label>
-            <TextBox Grid.Column="1" Width="80" Height="20"></TextBox>
-        </Grid>
-        -->
 
         <Grid Grid.Row="3" Grid.Column="1">
             <DataGrid x:Name="_listWorks" ItemsSource="{Binding model.works}" AutoGenerateColumns="False" IsReadOnly="True" CanUserSortColumns="False">

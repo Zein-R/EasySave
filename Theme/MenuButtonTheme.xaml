@@ -10,10 +10,7 @@
                         <Grid VerticalAlignment="Stretch"
                               HorizontalAlignment="Stretch"
                               Background="{TemplateBinding Background}">
-                            <Image Source="/Images/settings-icon.png"
-                                   Width="25" Height="25"
-                                   HorizontalAlignment="Left"
-                                   Margin="10,0,0,0"/>
+
                             <TextBlock Text="{TemplateBinding Property=Content}"
                                        VerticalAlignment="Center"
                                        Margin="30,0,0,0"/>

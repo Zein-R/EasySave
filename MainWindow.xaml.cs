@@ -133,5 +133,43 @@ namespace EasySave
             }
 
         }
+
+        private void btnReduce_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Maximized)
+                WindowState = WindowState.Normal;
+            else WindowState = WindowState.Maximized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void OpenLogFiles_Click(object sender, RoutedEventArgs e)
+        {
+           /* string cheminFichier = @"";
+
+            // Check if the folder exist
+            if (System.IO.File.Exists(cheminFichier))
+            {
+                // Open the folder with notepade
+                Process.Start("notepad.exe", cheminFichier);
+            }
+            else
+            {
+                MessageBox.Show("Le fichier spécifié n'existe pas.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+            }*/
+        }
     }
 }
