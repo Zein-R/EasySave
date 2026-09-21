@@ -2,8 +2,6 @@
 
 **EasySave** is a Windows desktop backup application built in C# / WPF (MVVM), developed as a school project (CESI). This version (v3) is a graphical rewrite of an earlier console-based EasySave project, adding a full UI, real-time monitoring, file encryption, and multi-language support.
 
-> ⚠️ **Status: old school project.** This was built for academic purposes and is not actively maintained.
-
 ## Features
 
 - **Backup jobs ("works")**: create, edit, and run backup jobs, each with a source folder, a target folder, and a backup type (`FULL` or `DIFFERENTIAL`).
